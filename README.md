@@ -1,11 +1,5 @@
 # Fastapi Docker PostgreSQL Test Example
-This demonstrates how to test FastAPI endpoints reliant on a PostgreSQL database.
-
-# Backend
-
-This project contains an API, it is a [FastAPI](https://fastapi.tiangolo.com/) application
-using [SQLAlchemy](https://docs.sqlalchemy.org/en/20/) for working with an in-memory SQLite DB.
-
+This demonstrates how to test FastAPI endpoints reliant on a PostgreSQL database with Docker.
 ## Prerequisites
 
 The following are must be installed to run the backend:
