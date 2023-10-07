@@ -15,14 +15,14 @@ generate_requirements_txt:
 
 test:
 	docker-compose up -d postgres-test
-	sleep 2
+	./wait-for-postgres.sh
 	export ENV=testing && pytest tests -s -x -vv
 	docker-compose stop postgres-test
 	docker-compose rm -f postgres-test
 
 test-coverage:
 	docker-compose up -d postgres-test
-	sleep 2
+	./wait-for-postgres.sh
 	export ENV=testing && pytest tests -x -vv --cov=. --cov-report=term-missing
 	docker-compose stop postgres-test
 	docker-compose rm -f postgres-test
